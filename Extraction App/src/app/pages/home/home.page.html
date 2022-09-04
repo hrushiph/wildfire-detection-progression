@@ -1,0 +1,72 @@
+<section class="container flex items-center justify-center">
+  <main class="mx-auto my-16 md:max-w-xl">
+    <br />
+    <h3 class="mb-4" style="text-transform: uppercase;">Satellite Image Data Extraction</h3>
+    <div class="grid md:grid-cols-1">
+      <div class="country-filter-container">
+        <p for="Select Region" style="margin-bottom: 5px;font-weight: bold;">Select Region</p>
+        <select name="Country" id="regionSelector" style="width: 100%;" #regionSelection>
+          <option value="North California" >North California</option>
+          <option value="San Diego" selected>San Diego</option>
+        </select>
+      </div>
+    </div>
+    <br/>
+    <div class="grid md:grid-cols-1">
+      <div class="country-filter-container">
+        <p for="Select Region" style="margin-bottom: 5px;font-weight: bold;">Select Image Type</p>
+        <select name="Country" id="regionSelector" style="width: 100%;" #satelliteImageType>
+          <option value="TrueColor" >MODIS True Color</option>
+          <option value="MODIS_Terra_CorrectedReflectance_Bands721" selected>MODIS 721</option>
+        </select>
+      </div>
+    </div>
+    <br/>
+    <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
+      <div class="date-picker-container">
+        <span class="form-group">
+          <p style="margin-bottom: 5px;font-weight: bold;">From</p>
+          <input type="date" for="fromDate" #fromValue value="2020-08-16">
+        </span>
+      </div>
+      <div class="date-picker-container">
+        <span class="form-group">
+          <p style="margin-bottom: 5px;font-weight: bold;">To</p>
+          <input type="date" for="toDate" #toValue value="2020-08-30">
+        </span>
+      </div>
+      <div class="button-container">
+        <button
+        style="background: #434349;margin-top: 7px;"
+          class="btn btn-secondary"
+          (click)="onClickChangeTheme(theme.System, fromValue.value, toValue.value, regionSelection.value, satelliteImageType.value)"
+          >
+          <!-- <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg> -->
+          Download
+        </button>
+      </div>
+    </div>
+    <div class="grid mb-12 image-container" >
+      <!-- Images append here -->
+    </div>
+  </main>
+</section>
