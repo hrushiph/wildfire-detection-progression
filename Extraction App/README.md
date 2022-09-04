@@ -1,5 +1,6 @@
 - Open the terminal where node is installed 
   - If node is not installed please install using the steps in the website - https://nodejs.org/en/download/
+  - Add https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj extension to chrome.
 - After installing node, Navigate to this folder and follow the below steps
 - sudo npm install
 - npm start
